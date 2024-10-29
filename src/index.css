@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+/* GENERAL */
+
+body {
+    margin: 0;
+    padding: 1em;
+}
+
+h1, h2, h3, button, label {
+    text-align: center;
+    font-family: "Merriweather", serif;
+    font-weight: 600;
+    width: 100%;
+}
+
+p {
+    font-family: "Merriweather", serif;
+    font-weight: 500;
+}
+
+.two-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* MONSTER CARD */
+
+.monster-card {
+    display: flex;
+    flex-direction: column;
+    background: grey;
+    width: 200px;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.monster-card button {
+    width: 200px;
+    border-radius: 0 0 10px 10px;
+    border: none;
+    box-shadow: 0 5px grey;
+    cursor: pointer;
+}
+
+.monster-card img {
+    border-radius: 10px 10px 0 0;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    filter: grayscale(1);
+}
+
+/* MONSTER CONTAINER */
+
+.monster-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1em;
+    width: 100%;
+}

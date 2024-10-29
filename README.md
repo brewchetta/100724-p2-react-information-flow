@@ -1,14 +1,12 @@
-# React State and Events
+# React Information Flow
 
 ## Learning Goals
 
-- React hooks
-
 - useState
 
-- Attaching event listeners in React
+- passing functions as a prop
 
-- Setting state as an async action
+- elevating state
 
 ## Getting Started
 

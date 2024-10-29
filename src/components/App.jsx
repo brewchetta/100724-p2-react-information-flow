@@ -1,11 +1,21 @@
-import { useState } from 'react'
+import MonstersContainer from './MonstersContainer'
+import FavoriteMonstersContainer from './FavoriteMonstersContainer'
 
 function App() {
 
   return (
     <div className="App">
 
-      <h1>React State and Events</h1>
+      <h1>MONSTERS!</h1>
+
+      <div className="two-columns">
+
+        <MonstersContainer />
+
+        <FavoriteMonstersContainer />
+
+      </div>
+
 
     </div>
   )
