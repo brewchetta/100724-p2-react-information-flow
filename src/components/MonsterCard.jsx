@@ -1,4 +1,12 @@
-function MonsterCard({ monster }) {
+function MonsterCard({ monster, setFavMonsters, fromFavorites=false }) {
+
+    function handleFavorite() {
+        setFavMonsters(favMonsters => favMonsters.includes(monster) ? favMonsters : [...favMonsters, monster] )
+    }
+
+    function handleRemoveFavorite() {
+        setFavMonsters( favMonsters => favMonsters.filter( eachMonster => eachMonster !== monster ) )
+    }
 
     return (
         <div className="monster-card">
@@ -7,7 +15,13 @@ function MonsterCard({ monster }) {
 
             <img src={monster.image} alt={`${monster.name} in black and white`} />
 
-            <button>Favorite</button>
+            { 
+                fromFavorites 
+                ? 
+                <button onClick={handleRemoveFavorite}>Remove</button> 
+                : 
+                <button onClick={handleFavorite}>Favorite</button> 
+            }
 
         </div>
     )

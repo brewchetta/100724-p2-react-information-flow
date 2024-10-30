@@ -1,11 +1,8 @@
-import { useState } from 'react'
 import MonsterCard from './MonsterCard'
 
-function FavoriteMonstersContainer() {
-    
-    const [monsters, setMonsters] = useState( [ ] )
+function FavoriteMonstersContainer({ favMonsters, setFavMonsters }) {
 
-    const mappedMonsters = monsters.map( monster =>  <MonsterCard key={monster.id} monster={monster} />)
+    const mappedMonsters = favMonsters.map( monster =>  <MonsterCard key={monster.id} monster={monster} fromFavorites={true} setFavMonsters={setFavMonsters} />)
 
     return (
         <div>
@@ -14,8 +11,8 @@ function FavoriteMonstersContainer() {
 
             <div className="monster-container">
                 
-                {/* if the monsters array has 0 length show an h3 instead */}
-                { monsters.length ? mappedMonsters : <h3>No favorites yet</h3> }
+                {/* if the favMonsters array has 0 length show an h3 instead */}
+                { favMonsters.length > 0 ? mappedMonsters : <h3>No favorites yet</h3> }
 
             </div>
  
